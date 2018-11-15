@@ -11,3 +11,17 @@ exports.setUserInfo = function setUserInfo(request) {
 
     return getUserInfo;
 };
+
+/**
+ * Return a known Error
+ * @param res
+ * @param message
+ * @returns {*}
+ */
+exports.knownError = (res, message) => {
+	return res.json({
+		status: false,
+		message: message,
+		data : null
+	})
+};
